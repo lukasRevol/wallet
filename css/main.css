@@ -1,1 +1,218 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Comfortaa", sans-serif;
+  color: #fff;
+  background-color: #151720;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3);
+  grid-template-rows: repeat(2);
+  width: 1200px;
+}
+
+.app-title {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  border-bottom: 1px solid #fff;
+}
+.app-title_header {
+  font-size: 3rem;
+}
+.app-title_header i {
+  margin-right: 20px;
+}
+.app-title_text {
+  font-size: 1rem;
+}
+
+.transactions {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-template-rows: repeat(2);
+  gap: 20px;
+  align-self: self-start;
+  padding: 30px;
+}
+.transactions_header {
+  text-align: center;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.transactions .transactions_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid white;
+}
+.transactions .transactions_box_header {
+  margin-bottom: 20px;
+}
+.transactions .transactions_box_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-bottom: 1px solid white;
+}
+.transactions .transactions_box_item .category {
+  display: flex;
+}
+.transactions .transactions_box_item .category i {
+  margin-right: 20px;
+}
+.transactions .transactions_box_item .amount {
+  display: flex;
+}
+.transactions .transactions_box_item .amount button {
+  margin-left: 20px;
+}
+.transactions .revenues {
+  color: yellowgreen;
+}
+.transactions .expenses {
+  color: tomato;
+}
+
+.summary {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  align-items: center;
+  margin: 30px;
+  padding: 30px;
+  border: 1px solid white;
+}
+.summary_header {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.summary_money {
+  margin: 20px 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.summary_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.summary_buttons .summary-btn {
+  padding: 10px 15px;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.summary_buttons .summary-btn:hover {
+  background-color: #fff;
+  color: #151720;
+}
+.summary_style-header {
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.summary_style-choice {
+  display: flex;
+}
+.summary_style-choice .style-btn {
+  width: 60px;
+  margin: 30px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.summary_style-choice .style-btn:hover {
+  scale: 1.1;
+}
+.summary_style-choice .btn-dark {
+  background-color: #151720;
+  border: 1px solid white;
+}
+
+.panel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  color: #151720;
+  background-color: #fff;
+}
+.panel_header {
+  margin-bottom: 30px;
+}
+.panel input, .panel select {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 5px 20px;
+  text-align: center;
+}
+.panel label {
+  font-weight: bold;
+}
+.panel .panel-btns .style-btn {
+  padding: 10px 15px;
+  color: #151720;
+  background: none;
+  border: 1px solid #151720;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.panel .panel-btns .style-btn:hover {
+  background-color: #151720;
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    grid-template-rows: repeat(3);
+  }
+  .transactions {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: grid;
+  }
+  .summary {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 768px) {
+  .transactions {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

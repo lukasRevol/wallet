@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/b0fde7f670.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./css/main.css" />
 		<title>E-Wallet</title>
 	</head>
@@ -11,48 +15,105 @@
 		<div class="wrapper">
 			<!-- Nagłówek aplikacji -->
 			<div class="app-title">
-				<h1 class="app-title_header">E-Wallet</h1>
+				<h1 class="app-title_header"><i class="fa-solid fa-wallet"></i>E-Wallet</h1>
 				<p class="app-title_text">Your personal electronic wallet</p>
 			</div>
 
 			<!-- pojemnik na transakcje -->
 			<div class="transactions">
-				<h1 class="transactions_header">transaction list</h1>
-				<div class="transactions_boxes">
-					<div class="revenues">
-						<h3 class="revenues_header">revenues</h3>
-						<div class="revenue_item">
-							<div class="revenue_item-icon"></div>
-							<p class="revenue_item-title">Wypłata</p>
-							<p class="revenue_item-amount"><span class="revenue_item-number">2500</span>zł</p>
-							<button class="revenue_item-delete">X</button>
+				
+					<h1 class="transactions_header">transactions list</h1>
+			
+
+					<div class="transactions_box">
+						<h3 class="transactions_box_header revenues">revenues</h3>
+						<div class="transactions_box_item">
+							<div class="category">
+								<i class="fa-solid fa-sack-dollar"></i>
+								<p class="title">Wypłata</p>
+							</div>
+							<div class="amount">
+								<p class="amount"><span class="revenue_item-number">5000</span>zł</p>
+								<button class="delete">X</button>
+							</div>
 						</div>
 					</div>
-					<div class="expenses">
-						<h3 class="expenses_header">revenues</h3>
-						<div class=expenses_item">
-							<div class="expenses_item-icon"></div>
-							<p class="expenses_item-title">Wypłata</p>
-							<p class="expenses_item-amount"><span class="expenses_item-number">2500</span>zł</p>
-							<button class="expenses_item-delete">X</button>
+
+
+					<div class="transactions_box">
+						<h3 class="transactions_box_header expenses">expenses</h3>
+						<div class="transactions_box_item">
+							<div class="category">
+								<i class="fa-solid fa-cart-shopping"></i>
+								<p class="title">Shoping</p>
+							</div>
+							<div class="amount">
+								<p class="amount"><span class="revenue_item-number">1000</span>zł</p>
+								<button class="delete">X</button>
+							</div>
+						</div>
+						<div class="transactions_box_item">
+							<div class="category">
+								<i class="fa-solid fa-house"></i>
+								<p class="title">Home</p>
+							</div>
+							<div class="amount">
+								<p class="amount"><span class="revenue_item-number">700</span>zł</p>
+								<button class="delete">X</button>
+							</div>
+						</div>
+						<div class="transactions_box_item">
+							<div class="category">
+								<i class="fa-solid fa-car"></i>
+								<p class="title">Car</p>
+							</div>
+							<div class="amount">
+								<p class="amount"><span class="revenue_item-number">300</span>zł</p>
+								<button class="delete">X</button>
+							</div>
 						</div>
 					</div>
-					<div class="transactions_boxes-expenses"></div>
-				</div>
+					
+				
 			</div>
 
 			<!-- pojemnik na podsumowanie -->
 			<div class="summary">
 				<h2 class="summary_header">Available cash</h2>
-				<p class="summary_money"></p>
+				<p class="summary_money">3000<span>zł</span></p>
 				<div class="summary_buttons">
-					<button class="summary_buttons-add"></button>
-					<button class="summary_buttons-clear"></button>
+					<button class="summary-btn summary_buttons-add">Add transaction</button>
+					<button class="summary-btn summary_buttons-clear">clear all</button>
 				</div>
+				<p class="summary_style-header">Choose style</p>
 				<div class="summary_style-choice">
-					<div class="style-choice-light"></div>
-					<div class="style-choice-dark"></div>
+					<div class="style-btn btn-light"></div>
+					<div class="style-btn btn-dark"></div>
 				</div>
+			</div>
+
+			
+
+		</div>
+		<div class="panel ide">
+			<h1 class="panel_header">Add new transaction</h1>
+			<label class="transaction-title" for="title">title</label>
+			<small>(add transaction title)</small>
+			<input class="transaction-title-input" type="text" id="title">
+			<label class="transaction-amount" for="amount">amount</label>
+			<small>(add transaction amount)</small>
+			<input class="transaction-amount-input" type="number" id="amount">
+			<label class="transaction-amount" for="category">category</label>
+			<small>(coose category)</small>
+			<select class="transaction-category-input" type="text" id="category">
+				<option value="0">---</option>
+				<option value="1">shoping</option>
+				<option value="1">home</option>
+				<option value="1">car</option>
+			</select>
+			<div class="panel-btns">
+				<button class="style-btn save-btn">Save</button>
+				<button class="style-btn cancel-btn">Cancel</button>
 			</div>
 		</div>
 
