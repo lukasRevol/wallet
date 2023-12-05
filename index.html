@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>E-Wallet</title>
+	</head>
+	<body>
+		<!-- .wrapper, ogranicza szerokość zawartości dla lepszego wyswietlania na szerokich ekranach -->
+		<div class="wrapper">
+			<!-- Nagłówek aplikacji -->
+			<div class="app-title">
+				<h1 class="app-title_header">E-Wallet</h1>
+				<p class="app-title_text">Your personal electronic wallet</p>
+			</div>
+
+			<!-- pojemnik na transakcje -->
+			<div class="transactions">
+				<h1 class="transactions_header">transaction list</h1>
+				<div class="transactions_boxes">
+					<div class="revenues">
+						<h3 class="revenues_header">revenues</h3>
+						<div class="revenue_item">
+							<div class="revenue_item-icon"></div>
+							<p class="revenue_item-title">Wypłata</p>
+							<p class="revenue_item-amount"><span class="revenue_item-number">2500</span>zł</p>
+							<button class="revenue_item-delete">X</button>
+						</div>
+					</div>
+					<div class="expenses">
+						<h3 class="expenses_header">revenues</h3>
+						<div class=expenses_item">
+							<div class="expenses_item-icon"></div>
+							<p class="expenses_item-title">Wypłata</p>
+							<p class="expenses_item-amount"><span class="expenses_item-number">2500</span>zł</p>
+							<button class="expenses_item-delete">X</button>
+						</div>
+					</div>
+					<div class="transactions_boxes-expenses"></div>
+				</div>
+			</div>
+
+			<!-- pojemnik na podsumowanie -->
+			<div class="summary">
+				<h2 class="summary_header">Available cash</h2>
+				<p class="summary_money"></p>
+				<div class="summary_buttons">
+					<button class="summary_buttons-add"></button>
+					<button class="summary_buttons-clear"></button>
+				</div>
+				<div class="summary_style-choice">
+					<div class="style-choice-light"></div>
+					<div class="style-choice-dark"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
