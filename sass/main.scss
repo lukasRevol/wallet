@@ -39,6 +39,8 @@ body {
 	}
 }
 
+
+
 .transactions {
 	grid-column: 1/3;
 	grid-row: 2/3;
@@ -72,7 +74,7 @@ body {
 			justify-content: space-between;
             padding: 15px 10px;
             border-bottom: 1px solid white;
-            .category {
+            .transactions_category {
                 display: flex;
                 i {
                     margin-right: 20px;
@@ -87,11 +89,11 @@ body {
 		}
 	}
 
-    .revenues {
+    .revenues-header {
         color: yellowgreen;
     }
 
-    .expenses {
+    .expenses-header {
         color: tomato;
     }
 }
@@ -181,13 +183,34 @@ body {
         width: 100%;
         max-width: 600px;
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         padding: 5px 20px;
         text-align: center;
     }
     label {
         font-weight: bold;
     }
+
+    .transaction-type-input {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 30px 0;
+        .choice {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .choice-revenues{
+            color: rgb(104, 146, 21);
+        }
+        .choice-expenses {
+            color: rgb(194, 24, 24);
+        }
+    }
+
     .panel-btns {
         .style-btn {
             padding: 10px 15px;

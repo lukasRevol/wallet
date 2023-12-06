@@ -73,10 +73,10 @@ body {
   padding: 15px 10px;
   border-bottom: 1px solid white;
 }
-.transactions .transactions_box_item .category {
+.transactions .transactions_box_item .transactions_category {
   display: flex;
 }
-.transactions .transactions_box_item .category i {
+.transactions .transactions_box_item .transactions_category i {
   margin-right: 20px;
 }
 .transactions .transactions_box_item .amount {
@@ -85,10 +85,10 @@ body {
 .transactions .transactions_box_item .amount button {
   margin-left: 20px;
 }
-.transactions .revenues {
+.transactions .revenues-header {
   color: yellowgreen;
 }
-.transactions .expenses {
+.transactions .expenses-header {
   color: tomato;
 }
 
@@ -172,12 +172,31 @@ body {
   width: 100%;
   max-width: 600px;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 5px 20px;
   text-align: center;
 }
 .panel label {
   font-weight: bold;
+}
+.panel .transaction-type-input {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+.panel .transaction-type-input .choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.panel .transaction-type-input .choice-revenues {
+  color: rgb(104, 146, 21);
+}
+.panel .transaction-type-input .choice-expenses {
+  color: rgb(194, 24, 24);
 }
 .panel .panel-btns .style-btn {
   padding: 10px 15px;
