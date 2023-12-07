@@ -34,8 +34,6 @@
 				<!-- pojemnik na przychody -->
 				<div class="transactions_box transactions_box_revenues">
 					<h3 class="transactions_box_header revenues-header">revenues</h3>
-
-
 					<div class="transactions_box_item">
 						<div class="transactions_category">
 							<i class="fa-solid fa-sack-dollar"></i>
@@ -43,14 +41,11 @@
 						</div>
 						<div class="amount">
 							<p class="amount">
-								<span class="revenue_item-number">5000</span>zł
+								<span class="item-number positive-transaction-amount">5000</span>zł
 							</p>
 							<button class="delete" onclick="deleteSinglePayment(this)">X</button>
 						</div>
 					</div>
-
-
-
 				</div>
 
 				<!-- pojemnik na wydatki -->
@@ -64,7 +59,7 @@
 						</div>
 						<div class="amount">
 							<p class="amount">
-								<span class="revenue_item-number">300</span>zł
+								<span class="item-number negative-transaction-amount">300</span>zł
 							</p>
 							<button class="delete" onclick="deleteSinglePayment(this)">X</button>
 						</div>
@@ -76,7 +71,7 @@
 			<!-- pojemnik na podsumowanie -->
 			<div class="summary">
 				<h2 class="summary_header">Available cash</h2>
-				<p class="summary_money">3000<span>zł</span></p>
+				<p class="summary_money">300<span>zł</span></p>
 				<div class="summary_buttons">
 					<button class="summary-btn summary_buttons-add">
 						Add transaction
@@ -90,6 +85,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- pojemnik na popup panel -->
 		<div class="panel hide">
 			<h1 class="panel_header">Add new transaction</h1>
 			<label class="transaction-title" for="title">title</label>
@@ -103,8 +100,9 @@
 			<select class="transaction-category-input" type="text" id="category">
 				<option value="0">---</option>
 				<option value="1">shoping</option>
-				<option value="1">home</option>
-				<option value="1">car</option>
+				<option value="2">home</option>
+				<option value="3">car</option>
+				<option value="4">salary</option>
 			</select>
 			<div class="transaction-type-input">
 				<div class="choice choice-revenues">
